@@ -1,6 +1,14 @@
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../../typings/tsd.d.ts" />
 
 import IonicPlatformService = ionic.platform.IonicPlatformService;
+import IScope = angular.IScope;
+import IStateParamsService = angular.ui.IStateParamsService;
+import IonicModalController = ionic.modal.IonicModalController;
+import IonicModalService = ionic.modal.IonicModalService;
+import ITimeoutService = angular.ITimeoutService;
+import IStateProvider = angular.ui.IStateProvider;
+import IUrlRouterProvider = angular.ui.IUrlRouterProvider;
+import IState = angular.ui.IState;
 
 (function () {
   var app = angular.module('starter', [

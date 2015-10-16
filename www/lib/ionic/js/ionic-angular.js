@@ -1038,7 +1038,7 @@ function($rootScope, $state, $location, $window, $timeout, $ionicViewSwitcher, $
     /**
      * @ngdoc method
      * @name $ionicHistory#viewHistory
-     * @description The app's view history data, such as all the views and histories, along
+     * @description The menu's view history data, such as all the views and histories, along
      * with how they are ordered and linked together within the navigation stack.
      * @returns {object} Returns an object containing the apps view history data.
      */
@@ -1049,7 +1049,7 @@ function($rootScope, $state, $location, $window, $timeout, $ionicViewSwitcher, $
     /**
      * @ngdoc method
      * @name $ionicHistory#currentView
-     * @description The app's current view.
+     * @description The menu's current view.
      * @returns {object} Returns the current view.
      */
     currentView: function(view) {
@@ -1167,7 +1167,7 @@ function($rootScope, $state, $location, $window, $timeout, $ionicViewSwitcher, $
      * in the current history's stack then it'll go to the first view in the current history's
      * stack. If the number is zero or greater then it'll do nothing. It also does not
      * cross history stacks, meaning it can only go as far back as the current history.
-     * @description Navigates the app to the back view, if a back view exists.
+     * @description Navigates the menu to the back view, if a back view exists.
      */
     goBack: function(backCount) {
       if (isDefined(backCount) && backCount !== -1) {
@@ -1212,7 +1212,7 @@ function($rootScope, $state, $location, $window, $timeout, $ionicViewSwitcher, $
     /**
      * @ngdoc method
      * @name $ionicHistory#clearHistory
-     * @description Clears out the app's entire history, except for the current view.
+     * @description Clears out the menu's entire history, except for the current view.
      */
     clearHistory: function() {
       var
@@ -1439,7 +1439,7 @@ function($rootScope, $state, $location, $document, $ionicPlatform, $ionicHistory
       // there is a back view, go to it
       backView.go();
     } else {
-      // there is no back view, so close the app instead
+      // there is no back view, so close the menu instead
       ionic.Platform.exitApp();
     }
     e.preventDefault();
@@ -6790,7 +6790,7 @@ IonicModule
 
     function setScrollLock(enabled) {
       // set the scrollbar to be position:fixed in preparation to overscroll
-      // or remove it so the app can be natively scrolled
+      // or remove it so the menu can be natively scrolled
       if (enabled) {
         ionic.requestAnimationFrame(function() {
           scrollChild.classList.add('overscroll');

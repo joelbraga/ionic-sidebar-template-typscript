@@ -1,8 +1,4 @@
-/// <reference path="../../typings/tsd.d.ts" />
-
-import IStateProvider = angular.ui.IStateProvider;
-import IUrlRouterProvider = angular.ui.IUrlRouterProvider;
-import IState = angular.ui.IState;
+/// <reference path="../../../typings/tsd.d.ts" />
 
 interface configRouteState {
   name: string;
@@ -21,7 +17,7 @@ interface configRouteState {
         config: {
           url: '/app',
           abstract: true,
-          templateUrl: 'templates/menu.html'
+          templateUrl: 'components/menu/menu.html'
         }
       },
       {
@@ -30,7 +26,7 @@ interface configRouteState {
           url: '/search',
           views: {
             'menuContent': {
-              templateUrl: 'templates/search.html'
+              templateUrl: 'components/search/search.html'
             }
           }
         }
@@ -41,7 +37,7 @@ interface configRouteState {
           url: '/browse',
           views: {
             'menuContent': {
-              templateUrl: 'templates/browse.html'
+              templateUrl: 'components/browse/browse.html'
             }
           }
         }
@@ -52,7 +48,7 @@ interface configRouteState {
           url: '/playlists',
           views: {
             'menuContent': {
-              templateUrl: 'templates/playlists.html'
+              templateUrl: 'components/playlists/playlists.html'
             }
           }
         }
@@ -63,7 +59,7 @@ interface configRouteState {
           url: '/playlists/:playlistId',
           views: {
             'menuContent': {
-              templateUrl: 'templates/playlist.html',
+              templateUrl: 'components/playlist/playlist.html',
               controller: 'PlaylistCtrl'
             }
           }

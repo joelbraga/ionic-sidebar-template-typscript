@@ -447,7 +447,7 @@ window.ionic.version = '1.1.0';
  *
  * Framework events handles various mobile browser events, and
  * detects special events like tap/swipe/etc. and emits them
- * as custom events that can be used in an app.
+ * as custom events that can be used in an menu.
  *
  * Portions lovingly adapted from github.com/maker/ratchet and github.com/alexgibson/tap.js - thanks guys!
  */
@@ -2102,8 +2102,8 @@ window.ionic.version = '1.1.0';
      * Trigger a callback once the device is ready, or immediately
      * if the device is already ready. This method can be run from
      * anywhere and does not need to be wrapped by any additonal methods.
-     * When the app is within a WebView (Cordova), it'll fire
-     * the callback once the device is ready. If the app is within
+     * When the menu is within a WebView (Cordova), it'll fire
+     * the callback once the device is ready. If the menu is within
      * a web browser, it'll fire the callback after `window.load`.
      * Please remember that Cordova features (Camera, FileSystem, etc) still
      * will not work in a web browser.
@@ -2342,7 +2342,7 @@ window.ionic.version = '1.1.0';
     /**
      * @ngdoc method
      * @name ionic.Platform#exitApp
-     * @description Exit the app.
+     * @description Exit the menu.
      */
     exitApp: function() {
       self.ready(function() {
@@ -2379,8 +2379,8 @@ window.ionic.version = '1.1.0';
      * @ngdoc method
      * @name ionic.Platform#fullScreen
      * @description
-     * Sets whether the app is fullscreen or not (in Cordova).
-     * @param {boolean=} showFullScreen Whether or not to set the app to fullscreen. Defaults to true. Requires `cordova plugin add org.apache.cordova.statusbar`
+     * Sets whether the menu is fullscreen or not (in Cordova).
+     * @param {boolean=} showFullScreen Whether or not to set the menu to fullscreen. Defaults to true. Requires `cordova plugin add org.apache.cordova.statusbar`
      * @param {boolean=} showStatusBar Whether or not to show the device's status bar. Defaults to false.
      */
     fullScreen: function(showFullScreen, showStatusBar) {
@@ -3781,7 +3781,7 @@ function keyboardFocusIn(e) {
     });
 
     // any showing part of the document that isn't within the scroll the user
-    // could touchmove and cause some ugly changes to the app, so disable
+    // could touchmove and cause some ugly changes to the menu, so disable
     // any touchmove events while the keyboard is open using e.preventDefault()
     if (window.navigator.msPointerEnabled) {
       document.addEventListener("MSPointerMove", keyboardPreventDefault, false);
@@ -4191,7 +4191,7 @@ ionic.Platform.ready(function() {
 
   window.addEventListener('orientationchange', keyboardOrientationChange);
 
-  // if orientation changes while app is in background, update on resuming
+  // if orientation changes while menu is in background, update on resuming
   /*
   if ( ionic.Platform.isWebView() ) {
     document.addEventListener('resume', keyboardInitViewportHeight);
@@ -4202,7 +4202,7 @@ ionic.Platform.ready(function() {
   }
   */
 
-  // if orientation changes while app is in background, update on resuming
+  // if orientation changes while menu is in background, update on resuming
 /*  if ( ionic.Platform.isWebView() ) {
     document.addEventListener('pause', function() {
       window.removeEventListener('orientationchange', keyboardOrientationChange);

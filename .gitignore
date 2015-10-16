@@ -8,6 +8,7 @@ typings/
 
 ## Compiled js Files
 www/js/*.js*
+www/components/*/*.js*
 
 ## IDE
 
