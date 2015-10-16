@@ -11,14 +11,14 @@ import IUrlRouterProvider = angular.ui.IUrlRouterProvider;
 import IState = angular.ui.IState;
 
 (function () {
-  var app = angular.module('starter', [
+  var app = angular.module('app', [
     // Ionic Modules
     'ionic',
 
     // Angular Modules
 
     // App Modules
-    'starter.controllers'
+    'app.components'
   ]);
 
   app.run(($ionicPlatform: IonicPlatformService) => {
@@ -37,4 +37,6 @@ import IState = angular.ui.IState;
     });
   });
 })();
+
+var components = angular.module('app.components', []);
 

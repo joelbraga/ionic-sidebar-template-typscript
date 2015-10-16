@@ -22,5 +22,5 @@ class PlaylistsController {
   }
 }
 
-var app = angular.module('starter.controllers');
-app.controller(PlaylistsController.IID, PlaylistsController);
+var components = angular.module('app.components');
+components.controller(PlaylistsController.IID, PlaylistsController);

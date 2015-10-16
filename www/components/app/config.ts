@@ -6,7 +6,7 @@ interface configRouteState {
 }
 
 (function () {
-  var app = angular.module('starter');
+  var app = angular.module('app');
 
   app.config(['$stateProvider', '$urlRouterProvider', routesConfigurator]);
 

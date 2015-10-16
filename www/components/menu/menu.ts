@@ -41,6 +41,6 @@ class MenuController {
   };
 }
 
-var app = angular.module('starter.controllers', []);
-app.controller(MenuController.IID, MenuController);
+var components = angular.module('app.components', []);
+components.controller(MenuController.IID, MenuController);
 

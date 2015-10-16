@@ -9,5 +9,5 @@ class PlayListController {
   }
 }
 
-var app = angular.module('starter.controllers');
-app.controller(PlayListController.IID, PlayListController);
+var components = angular.module('app.components');
+components.controller(PlayListController.IID, PlayListController);
